@@ -1,0 +1,25 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-snapvault-dev-64f30-authRole",
+      "UnauthRoleArn": "arn:aws:iam::927676118813:role/amplify-snapvault-dev-64f30-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::927676118813:role/amplify-snapvault-dev-64f30-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-snapvault-dev-64f30-deployment",
+      "UnauthRoleName": "amplify-snapvault-dev-64f30-unauthRole",
+      "StackName": "amplify-snapvault-dev-64f30",
+      "StackId": "arn:aws:cloudformation:us-east-1:927676118813:stack/amplify-snapvault-dev-64f30/7fbaee80-4db2-11f0-acf8-12b4c9d12bb5",
+      "AmplifyAppId": "duq6hksdkuhuw"
+    },
+    "categories": {
+      "auth": {
+        "snapvaultbfdf61a3": {
+          "userPoolId": "us-east-1_1QWwdhLB7",
+          "userPoolName": "image-share-user-pool",
+          "webClientId": "7ci9p7e7g1veijdm8et4sf3kr1",
+          "nativeClientId": "7ci9p7e7g1veijdm8et4sf3kr1"
+        }
+      }
+    }
+  }
+}
