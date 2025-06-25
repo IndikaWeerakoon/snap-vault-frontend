@@ -13,11 +13,11 @@
     },
     "categories": {
       "auth": {
-        "snapvaultbfdf61a3": {
-          "userPoolId": "us-east-1_1QWwdhLB7",
+        "snapvaultaa23c3c6": {
+          "userPoolId": "us-east-1_0bmiJBeMw",
           "userPoolName": "image-share-user-pool",
-          "webClientId": "7ci9p7e7g1veijdm8et4sf3kr1",
-          "nativeClientId": "7ci9p7e7g1veijdm8et4sf3kr1"
+          "webClientId": "7296cpngddt2cq6e1mb12f8h4j",
+          "nativeClientId": "7296cpngddt2cq6e1mb12f8h4j"
         }
       }
     }

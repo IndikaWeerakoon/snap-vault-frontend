@@ -1,5 +1,4 @@
 import { Navigate, Route, Routes } from 'react-router'
-import './App.css'
 import { Dashboard } from './pages/dashboard/Dashboard'
 import { SignUp } from './pages/sign-up/SignUp'
 import { Unauthorized } from './pages/unauthorized/Unauthorized'

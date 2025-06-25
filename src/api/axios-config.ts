@@ -1,5 +1,8 @@
 // src/api/axiosInstance.ts
-import axios, { AxiosError } from 'axios';
+import axios from 'axios';
+import { fetchAuthSession } from 'aws-amplify/auth';
+import { store } from '../redux/store';
+import { logoutAsync } from '../redux/slices/auth-slice';
 
 const baseURL = import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:3000/api';
 
@@ -11,49 +14,41 @@ const axiosInstance = axios.create({
 });
 
 // Request interceptor: attach token
-axiosInstance.interceptors.request.use((config) => {
-  const token = ''
-  if (token) {
-    config.headers.Authorization = `Bearer ${token}`;
-  }
-  return config;
+axiosInstance.interceptors.request.use(async (config) => {
+  try {
+      const { idToken } = (await fetchAuthSession()).tokens ?? {};
+      
+      if (idToken) {
+        config.headers.Authorization = `Bearer ${idToken}`;
+      }
+      return config;
+    } catch (error) {
+      console.error('Error getting token:', error);
+      store.dispatch(logoutAsync());
+      return Promise.reject(error instanceof Error ? error : new Error(error as string));
+    }
 });
 
 // Response interceptor: handle token refresh
 axiosInstance.interceptors.response.use(
   (response) => response,
-  async (error: AxiosError) => {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const originalRequest = error.config as any;
-
-    if (
-      error.response?.status === 401 &&
-      !originalRequest._retry
-    //   validate token exist
-    ) {
+  async (error) => {
+    const originalRequest = error.config;
+    
+    if (error.response?.status === 401 && !originalRequest._retry) {
       originalRequest._retry = true;
+      
       try {
-        const refreshResponse = await axios.post(`${baseURL}/auth/refresh`, {
-          refreshToken: '', //attche refresh token
-        });
-
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        const { accessToken, refreshToken } = refreshResponse.data;
-        // store tokens
-
-        axiosInstance.defaults.headers.common.Authorization = `Bearer ${accessToken}`;
-        originalRequest.headers.Authorization = `Bearer ${accessToken}`;
-
+        // Attempt to refresh token (Amplify usually handles this automatically)
+        await fetchAuthSession({ forceRefresh: true });
         return axiosInstance(originalRequest);
       } catch (refreshError) {
-        console.error('Token refresh failed:', refreshError);
-        // Optional: redirect to login
-        window.location.href = '/login';
-        return Promise.reject(refreshError instanceof Error ? refreshError : new Error(String(error)));
+        console.error('Session expired:', refreshError);
+        store.dispatch(logoutAsync());
       }
     }
 
-    return Promise.reject(error instanceof Error ? error : new Error(String(error)));
+    return Promise.reject(error instanceof Error ? error : new Error(error));
   }
 );
 

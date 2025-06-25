@@ -1,6 +1,10 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router";
+import { signUpAsync } from "../../redux/slices/auth-slice";
+import type { RootState } from "../../redux/store";
+import CircularProgress from "@mui/material/CircularProgress";
 
 type FormData = {
   name: string;
@@ -15,9 +19,13 @@ export const SignUp: React.FC = () => {
     formState: { errors },
   } = useForm<FormData>();
 
+  const dispatch = useDispatch();
+  const  { loading, error } = useSelector((state: RootState) => state.auth); // Adjust according to your auth state structure
+
+
   const onSubmit = (data: FormData) => {
     console.log('Signup Data:', data);
-    // Handle API call here
+    dispatch(signUpAsync(data));
   };
 
   return (
@@ -87,10 +95,19 @@ export const SignUp: React.FC = () => {
           {/* Submit */}
           <button
             type="submit"
-            className="w-full action-gradient-bg  text-white py-2 rounded-lg font-semibold transition"
+            className="w-full action-gradient-bg  text-white py-2 rounded-lg font-semibold transition gap-3 flex items-center justify-center cursor-pointer"
+            disabled={loading.signUp}
           >
             Create Account
+            {loading.signUp && (
+              <CircularProgress size="16px" 
+                sx={{ color: 'white' }}  />
+            )}
           </button>
+
+          {error && (
+            <p className="text-red-500 text-sm ">{error}</p>
+          )}
         </form>
 
         <p className="text-center text-sm text-gray-500 mt-4">
