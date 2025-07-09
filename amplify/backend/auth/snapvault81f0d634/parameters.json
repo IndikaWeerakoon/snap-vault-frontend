@@ -1,6 +1,6 @@
 {
-  "authSelections": "userPoolOnly",
-  "resourceName": "snapvaultaa23c3c6",
+  "authSelections": "identityPoolAndUserPool",
+  "resourceName": "snapvault81f0d634",
   "serviceType": "imported",
   "region": "us-east-1",
   "usernameAttributes": [

@@ -12,12 +12,25 @@
       "AmplifyAppId": "duq6hksdkuhuw"
     },
     "categories": {
+      "storage": {
+        "snapvault1ca46f30": {
+          "bucketName": "snap-vault-image-repo",
+          "region": "us-east-1"
+        }
+      },
       "auth": {
-        "snapvaultaa23c3c6": {
+        "snapvault81f0d634": {
           "userPoolId": "us-east-1_0bmiJBeMw",
           "userPoolName": "image-share-user-pool",
           "webClientId": "7296cpngddt2cq6e1mb12f8h4j",
-          "nativeClientId": "7296cpngddt2cq6e1mb12f8h4j"
+          "nativeClientId": "7296cpngddt2cq6e1mb12f8h4j",
+          "identityPoolId": "us-east-1:c3142f82-d8a8-4778-93d6-3a90ec039db3",
+          "identityPoolName": "image-pool",
+          "allowUnauthenticatedIdentities": true,
+          "authRoleArn": "arn:aws:iam::927676118813:role/service-role/image-pool-auth-role",
+          "authRoleName": "image-pool-auth-role",
+          "unauthRoleArn": "arn:aws:iam::927676118813:role/service-role/image-pool-unauth-role",
+          "unauthRoleName": "image-pool-unauth-role"
         }
       }
     }

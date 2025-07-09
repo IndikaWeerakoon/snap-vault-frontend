@@ -1,6 +1,6 @@
 {
   "auth": {
-    "snapvaultaa23c3c6": {
+    "snapvault81f0d634": {
       "customAuth": false,
       "dependsOn": [],
       "providerPlugin": "awscloudformation",
@@ -9,37 +9,117 @@
     }
   },
   "parameters": {
-    "AMPLIFY_auth_snapvaultaa23c3c6_nativeClientId": {
+    "AMPLIFY_auth_snapvault81f0d634_allowUnauthenticatedIdentities": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "snapvaultaa23c3c6"
+          "resourceName": "snapvault81f0d634"
         }
       ]
     },
-    "AMPLIFY_auth_snapvaultaa23c3c6_userPoolId": {
+    "AMPLIFY_auth_snapvault81f0d634_authRoleArn": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "snapvaultaa23c3c6"
+          "resourceName": "snapvault81f0d634"
         }
       ]
     },
-    "AMPLIFY_auth_snapvaultaa23c3c6_userPoolName": {
+    "AMPLIFY_auth_snapvault81f0d634_authRoleName": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "snapvaultaa23c3c6"
+          "resourceName": "snapvault81f0d634"
         }
       ]
     },
-    "AMPLIFY_auth_snapvaultaa23c3c6_webClientId": {
+    "AMPLIFY_auth_snapvault81f0d634_identityPoolId": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "snapvaultaa23c3c6"
+          "resourceName": "snapvault81f0d634"
         }
       ]
+    },
+    "AMPLIFY_auth_snapvault81f0d634_identityPoolName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "snapvault81f0d634"
+        }
+      ]
+    },
+    "AMPLIFY_auth_snapvault81f0d634_nativeClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "snapvault81f0d634"
+        }
+      ]
+    },
+    "AMPLIFY_auth_snapvault81f0d634_unauthRoleArn": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "snapvault81f0d634"
+        }
+      ]
+    },
+    "AMPLIFY_auth_snapvault81f0d634_unauthRoleName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "snapvault81f0d634"
+        }
+      ]
+    },
+    "AMPLIFY_auth_snapvault81f0d634_userPoolId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "snapvault81f0d634"
+        }
+      ]
+    },
+    "AMPLIFY_auth_snapvault81f0d634_userPoolName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "snapvault81f0d634"
+        }
+      ]
+    },
+    "AMPLIFY_auth_snapvault81f0d634_webClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "snapvault81f0d634"
+        }
+      ]
+    },
+    "AMPLIFY_storage_snapvault1ca46f30_bucketName": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "snapvault1ca46f30"
+        }
+      ]
+    },
+    "AMPLIFY_storage_snapvault1ca46f30_region": {
+      "usedBy": [
+        {
+          "category": "storage",
+          "resourceName": "snapvault1ca46f30"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "snapvault1ca46f30": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "S3",
+      "serviceType": "imported"
     }
   }
 }

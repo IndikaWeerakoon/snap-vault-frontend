@@ -6,6 +6,7 @@ import PrivateRouter from './components/private-router/PrivateRouter'
 import { Login } from './pages/login/Login'
 import { Layout } from './components/layout/Layout'
 import { useAuth } from './components/auth-context/AuthContext'
+import { Gallery } from './pages/gallery/Gallery'
 
 function App() {
   const auth = useAuth();
@@ -28,7 +29,7 @@ function App() {
           {/* Protected routes */}
           <Route element={<PrivateRouter />}>
             <Route path="/" element={<Dashboard />} />
-            {/* Add other protected routes here */}
+            <Route path="/gallery" element={<Gallery />} />
           </Route>
 
           {/* Catch-all route */}

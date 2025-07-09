@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router";
 import { signUpAsync } from "../../redux/slices/auth-slice";
 import type { RootState } from "../../redux/store";
-import CircularProgress from "@mui/material/CircularProgress";
+import { AppButton } from "../../components/app-button/AppButton";
 
 type FormData = {
   name: string;
@@ -93,17 +93,13 @@ export const SignUp: React.FC = () => {
           </div>
 
           {/* Submit */}
-          <button
+          <AppButton
             type="submit"
-            className="w-full action-gradient-bg  text-white py-2 rounded-lg font-semibold transition gap-3 flex items-center justify-center cursor-pointer"
-            disabled={loading.signUp}
-          >
-            Create Account
-            {loading.signUp && (
-              <CircularProgress size="16px" 
-                sx={{ color: 'white' }}  />
-            )}
-          </button>
+            isLoading={loading.signUp}
+            variant="contained"
+            text="Create Account"
+            className="w-full mt-4 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
 
           {error && (
             <p className="text-red-500 text-sm ">{error}</p>

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router";
 import { loginAsync } from "../../redux/slices/auth-slice";
 import type { RootState } from "../../redux/store";
-import CircularProgress from '@mui/material/CircularProgress';
+import { AppButton } from "../../components/app-button/AppButton";
 
 type LoginFormInputs = {
   email: string;
@@ -74,17 +74,14 @@ const {
             )}
           </div>
 
-          <div  className="w-full gap-1 flex items-start justify-center flex-col">
-            <button
+          <div  className="w-full gap-2 flex items-start justify-center flex-col mt-6">
+            <AppButton
               type="submit"
-              className="w-full action-gradient-bg text-white py-2 rounded-lg font-semibold transition gap-3 flex items-center justify-center"
-              disabled={loadingLogin}>
-              Login
-              {loadingLogin && (
-                <CircularProgress size="16px" 
-                  sx={{ color: 'white' }}  />
-              )}
-            </button>
+              isLoading={loadingLogin}
+              variant="contained"
+              text="Login"
+              className="w-full mt-4 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
 
             {error && (
               <p className="text-red-500 text-sm ">{error}</p>
