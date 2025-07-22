@@ -1,6 +1,6 @@
 {
   "auth": {
-    "snapvault81f0d634": {
+    "snapvault3d988758": {
       "customAuth": false,
       "dependsOn": [],
       "providerPlugin": "awscloudformation",
@@ -9,113 +9,113 @@
     }
   },
   "parameters": {
-    "AMPLIFY_auth_snapvault81f0d634_allowUnauthenticatedIdentities": {
+    "AMPLIFY_auth_snapvault3d988758_allowUnauthenticatedIdentities": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "snapvault81f0d634"
+          "resourceName": "snapvault3d988758"
         }
       ]
     },
-    "AMPLIFY_auth_snapvault81f0d634_authRoleArn": {
+    "AMPLIFY_auth_snapvault3d988758_authRoleArn": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "snapvault81f0d634"
+          "resourceName": "snapvault3d988758"
         }
       ]
     },
-    "AMPLIFY_auth_snapvault81f0d634_authRoleName": {
+    "AMPLIFY_auth_snapvault3d988758_authRoleName": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "snapvault81f0d634"
+          "resourceName": "snapvault3d988758"
         }
       ]
     },
-    "AMPLIFY_auth_snapvault81f0d634_identityPoolId": {
+    "AMPLIFY_auth_snapvault3d988758_identityPoolId": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "snapvault81f0d634"
+          "resourceName": "snapvault3d988758"
         }
       ]
     },
-    "AMPLIFY_auth_snapvault81f0d634_identityPoolName": {
+    "AMPLIFY_auth_snapvault3d988758_identityPoolName": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "snapvault81f0d634"
+          "resourceName": "snapvault3d988758"
         }
       ]
     },
-    "AMPLIFY_auth_snapvault81f0d634_nativeClientId": {
+    "AMPLIFY_auth_snapvault3d988758_nativeClientId": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "snapvault81f0d634"
+          "resourceName": "snapvault3d988758"
         }
       ]
     },
-    "AMPLIFY_auth_snapvault81f0d634_unauthRoleArn": {
+    "AMPLIFY_auth_snapvault3d988758_unauthRoleArn": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "snapvault81f0d634"
+          "resourceName": "snapvault3d988758"
         }
       ]
     },
-    "AMPLIFY_auth_snapvault81f0d634_unauthRoleName": {
+    "AMPLIFY_auth_snapvault3d988758_unauthRoleName": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "snapvault81f0d634"
+          "resourceName": "snapvault3d988758"
         }
       ]
     },
-    "AMPLIFY_auth_snapvault81f0d634_userPoolId": {
+    "AMPLIFY_auth_snapvault3d988758_userPoolId": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "snapvault81f0d634"
+          "resourceName": "snapvault3d988758"
         }
       ]
     },
-    "AMPLIFY_auth_snapvault81f0d634_userPoolName": {
+    "AMPLIFY_auth_snapvault3d988758_userPoolName": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "snapvault81f0d634"
+          "resourceName": "snapvault3d988758"
         }
       ]
     },
-    "AMPLIFY_auth_snapvault81f0d634_webClientId": {
+    "AMPLIFY_auth_snapvault3d988758_webClientId": {
       "usedBy": [
         {
           "category": "auth",
-          "resourceName": "snapvault81f0d634"
+          "resourceName": "snapvault3d988758"
         }
       ]
     },
-    "AMPLIFY_storage_snapvault1ca46f30_bucketName": {
+    "AMPLIFY_storage_snapvault298b26be_bucketName": {
       "usedBy": [
         {
           "category": "storage",
-          "resourceName": "snapvault1ca46f30"
+          "resourceName": "snapvault298b26be"
         }
       ]
     },
-    "AMPLIFY_storage_snapvault1ca46f30_region": {
+    "AMPLIFY_storage_snapvault298b26be_region": {
       "usedBy": [
         {
           "category": "storage",
-          "resourceName": "snapvault1ca46f30"
+          "resourceName": "snapvault298b26be"
         }
       ]
     }
   },
   "storage": {
-    "snapvault1ca46f30": {
+    "snapvault298b26be": {
       "dependsOn": [],
       "providerPlugin": "awscloudformation",
       "service": "S3",
